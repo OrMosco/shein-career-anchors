@@ -13,7 +13,7 @@ const RatingButton = ({ value, selected, onClick }: RatingButtonProps) => {
       variant={selected ? "rating-active" : "rating"}
       size="lg"
       className={cn(
-        "w-16 h-16 text-lg font-semibold rounded-xl",
+        "w-12 h-12 text-base font-semibold rounded-lg",
         selected && "scale-110 shadow-lg"
       )}
       onClick={() => onClick(value)}

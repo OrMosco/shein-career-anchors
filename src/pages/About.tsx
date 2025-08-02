@@ -30,8 +30,8 @@ const About = () => {
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 justify-end">
-                <span>המחקר המקורי</span>
                 <BookOpen className="h-6 w-6 text-primary" />
+                <span>המחקר המקורי</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -55,20 +55,20 @@ const About = () => {
             <CardContent>
               <div className="grid gap-4">
                 <div className="flex items-center gap-3 justify-end">
+                  <CheckCircle className="h-5 w-5 text-primary" />
                   <span>אם את/ה בתחילת הדרך המקצועית שלך</span>
-                  <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex items-center gap-3 justify-end">
+                  <CheckCircle className="h-5 w-5 text-primary" />
                   <span>אם את/ה מתלבט/ת לגבי שינוי קריירה</span>
-                  <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex items-center gap-3 justify-end">
+                  <CheckCircle className="h-5 w-5 text-primary" />
                   <span>אם את/ה מרגיש/ה חוסר סיפוק מהעבודה הנוכחית</span>
-                  <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex items-center gap-3 justify-end">
-                  <span>או אם את/ה פשוט סקרן/ית לגלות מה באמת מניע אותך</span>
                   <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>או אם את/ה פשוט סקרן/ית לגלות מה באמת מניע אותך</span>
                 </div>
               </div>
             </CardContent>
