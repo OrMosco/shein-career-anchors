@@ -26,8 +26,18 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
+				// Career Anchor Colors
+				'tf': 'hsl(var(--tf-color))',
+				'gm': 'hsl(var(--gm-color))',
+				'au': 'hsl(var(--au-color))',
+				'se': 'hsl(var(--se-color))',
+				'ec': 'hsl(var(--ec-color))',
+				'sv': 'hsl(var(--sv-color))',
+				'ch': 'hsl(var(--ch-color))',
+				'ls': 'hsl(var(--ls-color))',
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
