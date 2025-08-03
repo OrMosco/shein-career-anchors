@@ -15,11 +15,7 @@ const Landing = () => {
     <div className="min-h-screen bg-transparent font-alef">
       {/* Header */}
       <header className="bg-transparent border-b border-border/30">
-        <div className="container mx-auto px-6 py-6 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <h1 className="text-xl font-bold text-foreground">עוד מידע</h1>
-            <Brain className="h-8 w-8 text-primary" />
-          </div>
+        <div className="container mx-auto px-6 py-6 flex justify-end items-center">
           <Link to="/about">
             <Anchor className="h-8 w-8 text-primary" />
           </Link>
@@ -41,14 +37,11 @@ const Landing = () => {
               <Button 
                 variant="outline" 
                 size="default" 
-                className="text-base px-8 py-3 h-auto rounded-xl bg-white text-primary border-primary hover:bg-white transition-all duration-500"
+                className="text-base px-8 py-3 h-auto rounded-xl bg-white text-primary border-primary hover:bg-primary hover:text-white transition-all duration-500 group"
                 onClick={handleButtonClick}
               >
-                {isClicked ? (
-                  <Anchor className="h-6 w-6" />
-                ) : (
-                  'התחל את השאלון'
-                )}
+                <span className="group-hover:hidden">התחל את השאלון</span>
+                <Anchor className="h-6 w-6 hidden group-hover:block" />
               </Button>
             </Link>
           </div>
