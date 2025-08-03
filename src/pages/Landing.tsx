@@ -37,7 +37,7 @@ const Landing = () => {
               <Button 
                 variant="outline" 
                 size="default" 
-                className="text-base px-8 py-3 h-auto rounded-xl bg-white text-primary border-primary hover:bg-primary hover:text-white transition-all duration-500 group"
+                className="text-base px-8 py-3 h-12 w-48 rounded-xl bg-white text-primary border-primary hover:bg-primary hover:text-white transition-all duration-500 group flex items-center justify-center"
                 onClick={handleButtonClick}
               >
                 <span className="group-hover:hidden">התחל את השאלון</span>
