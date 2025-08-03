@@ -112,7 +112,7 @@ const Questionnaire = () => {
                   <span>לא מסכים בכלל</span>
                 </div>
                 
-                <div className="flex justify-center gap-3">
+                <div className="flex justify-center gap-2 sm:gap-3 flex-wrap">
                   {[6, 5, 4, 3, 2, 1].map((rating) => (
                     <RatingButton
                       key={rating}
