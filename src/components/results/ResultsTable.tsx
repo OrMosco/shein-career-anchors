@@ -40,11 +40,16 @@ const ResultsTable = ({ results }: ResultsTableProps) => {
               </TableCell>
               <TableCell>
                 <div className="flex flex-wrap gap-1 justify-end">
-                  {result.careers.map((career, i) => (
+                  {result.careers.slice(0, 3).map((career, i) => (
                     <Badge key={i} variant="outline" className="text-xs">
                       {career}
                     </Badge>
                   ))}
+                  {result.careers.length > 3 && (
+                    <Badge variant="outline" className="text-xs opacity-60">
+                      +{result.careers.length - 3}
+                    </Badge>
+                  )}
                 </div>
               </TableCell>
             </TableRow>

@@ -19,7 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'alef': ['Alef', 'Arial', 'sans-serif'],
+				'assistant': ['Assistant', 'Arial', 'sans-serif'],
+				'sans': ['Assistant', 'Arial', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
