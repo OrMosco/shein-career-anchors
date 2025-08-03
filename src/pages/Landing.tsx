@@ -29,7 +29,7 @@ const Landing = () => {
       {/* Hero Section */}
       <main className="container mx-auto px-6 py-32 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-7xl font-bold mb-8 text-foreground leading-tight">
+          <h1 className="text-4xl font-bold mb-8 text-foreground leading-tight">
             עוגני הקריירה של שיין
           </h1>
           <p className="text-2xl text-muted-foreground mb-16 leading-relaxed font-light">
