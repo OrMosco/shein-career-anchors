@@ -16,12 +16,13 @@ const Landing = () => {
       {/* Header */}
       <header className="bg-transparent border-b border-border/30">
         <div className="container mx-auto px-6 py-6 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <h1 className="text-xl font-bold text-foreground">עוד מידע</h1>
-            <Brain className="h-8 w-8 text-primary" />
-          </div>
+          <div></div>
           <Link to="/about">
-            <Button variant="ghost" className="text-foreground">עוגני קריירה</Button>
+            <img 
+              src="/lovable-uploads/25ff3886-176d-41bf-8f61-8a7373491d43.png" 
+              alt="Anchor" 
+              className="h-8 w-8"
+            />
           </Link>
         </div>
       </header>
@@ -39,17 +40,13 @@ const Landing = () => {
           <div className="mb-32">
             <Link to="/questionnaire">
               <Button 
-                variant="default" 
-                size="lg" 
-                className={`text-lg px-16 py-8 h-auto rounded-xl text-white transition-all duration-500 ${
-                  isClicked 
-                    ? 'bg-primary-glow hover:bg-primary-glow' 
-                    : 'bg-primary hover:bg-primary-glow'
-                }`}
+                variant="outline" 
+                size="sm" 
+                className={`text-base px-8 py-4 h-auto rounded-xl bg-white text-foreground border-primary hover:bg-white/90 transition-all duration-500`}
                 onClick={handleButtonClick}
               >
                 {isClicked ? (
-                  <Anchor className="h-6 w-6" />
+                  <Anchor className="h-5 w-5" />
                 ) : (
                   'התחל את השאלון'
                 )}
