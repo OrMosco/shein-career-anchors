@@ -21,7 +21,7 @@ const Landing = () => {
             <Brain className="h-8 w-8 text-primary" />
           </div>
           <Link to="/about">
-            <Button variant="ghost" className="text-foreground">עוגני קריירה</Button>
+            <Anchor className="h-8 w-8 text-primary" />
           </Link>
         </div>
       </header>
@@ -39,13 +39,9 @@ const Landing = () => {
           <div className="mb-32">
             <Link to="/questionnaire">
               <Button 
-                variant="default" 
-                size="lg" 
-                className={`text-lg px-16 py-8 h-auto rounded-xl text-white transition-all duration-500 ${
-                  isClicked 
-                    ? 'bg-primary-glow hover:bg-primary-glow' 
-                    : 'bg-primary hover:bg-primary-glow'
-                }`}
+                variant="outline" 
+                size="default" 
+                className="text-base px-8 py-3 h-auto rounded-xl bg-white text-primary border-primary hover:bg-white transition-all duration-500"
                 onClick={handleButtonClick}
               >
                 {isClicked ? (
