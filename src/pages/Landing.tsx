@@ -12,104 +12,74 @@ const Landing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-transparent font-alef">
-      {/* Header */}
-      <header className="bg-transparent border-b border-border/30">
-        <div className="container mx-auto px-6 py-6 flex justify-end items-center">
-          <Link to="/about">
-            <Anchor className="h-8 w-8 text-primary" />
-          </Link>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <main className="container mx-auto px-6 py-32 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-foreground leading-tight">
-            עוגני הקריירה של שיין
+    <div className="min-h-screen bg-background font-assistant">
+      {/* Minimal Hero Section */}
+      <main className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
+        <div className="max-w-2xl mx-auto space-y-8">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+            עוגני קריירה
           </h1>
-          <p className="text-2xl text-muted-foreground mb-16 leading-relaxed font-light">
-            אבחון הגורמים שמניעים אותנו בבחירת קריירה
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4">
+            שאלון זה יכול לסייע לזהות עוגן הקריירה שלך - הגורם החיוני שמניע אותך בבחירת עיסוק.
           </p>
           
-          <div className="mb-32">
+          <div className="pt-8">
             <Link to="/questionnaire">
               <Button 
-                variant="outline" 
-                size="default" 
-                className="text-base px-8 py-3 h-12 w-48 rounded-xl bg-white text-primary border-primary hover:bg-primary hover:text-white transition-all duration-500 group flex items-center justify-center"
+                size="lg"
+                className="px-12 py-4 text-lg bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all duration-300"
                 onClick={handleButtonClick}
               >
-                <span className="group-hover:hidden">התחל את השאלון</span>
-                <Anchor className="h-6 w-6 hidden group-hover:block" />
+                להתחיל שאלון
               </Button>
             </Link>
           </div>
 
-          {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mt-24">
-            <Card className="bg-card/80 border-border/30 hover:bg-card smooth-transition shadow-md">
-              <CardContent className="p-8 text-center">
-                <div className="flex justify-center mb-6">
-                  <Target className="h-12 w-12 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">זיהוי מדויק</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  40 שאלות מדויקות לזיהוי העוגנים הדומיננטיים שלך
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border/30 hover:bg-card smooth-transition shadow-md">
-              <CardContent className="p-8 text-center">
-                <div className="flex justify-center mb-6">
-                  <TrendingUp className="h-12 w-12 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">תובנות מעמיקות</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  קבל הסבר מפורט על המניעים שלך והכיוון המתאים
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/80 border-border/30 hover:bg-card smooth-transition shadow-md">
-              <CardContent className="p-8 text-center">
-                <div className="flex justify-center mb-6">
-                  <Users className="h-12 w-12 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">מבוסס מחקר</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  המודל של אדגר שיין - מחקר מוכח של עשרות שנים
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Who is it for - Hidden initially, shown on scroll */}
-          <div className="mt-32 opacity-0 transform translate-y-8 animate-fade-in" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
-            <h2 className="text-4xl font-bold mb-12 text-center text-foreground">למי זה מתאים?</h2>
-            <div className="max-w-2xl mx-auto space-y-8 text-center">
-              <div className="text-lg text-muted-foreground leading-relaxed">
-                אם את/ה בתחילת הדרך המקצועית שלך
-              </div>
-              <div className="text-lg text-muted-foreground leading-relaxed">
-                אם את/ה מתלבט/ת לגבי שינוי קריירה
-              </div>
-              <div className="text-lg text-muted-foreground leading-relaxed">
-                אם את/ה מרגיש/ה חוסר סיפוק מהעבודה הנוכחית
-              </div>
-              <div className="text-lg text-muted-foreground leading-relaxed">
-                או אם את/ה פשוט סקרן/ית לגלות מה באמת מניע אותך
+          {/* Additional content sections - simplified */}
+          <div className="pt-32 space-y-16">
+            <div className="space-y-8">
+              <h2 className="text-3xl font-bold text-foreground">למי זה מתאים?</h2>
+              <div className="space-y-4 text-lg text-muted-foreground">
+                <p>אם את/ה בתחילת הדרך המקצועית שלך</p>
+                <p>אם את/ה מתלבט/ת לגבי שינוי קריירה</p>
+                <p>אם את/ה מרגיש/ה חוסר סיפוק מהעבודה הנוכחית</p>
+                <p>או אם את/ה פשוט סקרן/ית לגלות מה באמת מניע אותך</p>
               </div>
             </div>
-          </div>
 
-          <div className="mt-20 opacity-0 transform translate-y-8 animate-fade-in" style={{animationDelay: '1s', animationFillMode: 'forwards'}}>
-            <Link to="/questionnaire">
-              <Button variant="outline" size="lg" className="px-12 py-4 text-lg border-primary text-primary hover:bg-primary hover:text-white">
-                בואו נתחיל
-              </Button>
-            </Link>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="space-y-4">
+                <Target className="h-12 w-12 text-primary mx-auto" />
+                <h3 className="text-xl font-semibold text-foreground">זיהוי מדויק</h3>
+                <p className="text-muted-foreground">
+                  40 שאלות מדויקות לזיהוי העוגנים הדומיננטיים שלך
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <TrendingUp className="h-12 w-12 text-primary mx-auto" />
+                <h3 className="text-xl font-semibold text-foreground">תובנות מעמיקות</h3>
+                <p className="text-muted-foreground">
+                  קבל הסבר מפורט על המניעים שלך והכיוון המתאים
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <Users className="h-12 w-12 text-primary mx-auto" />
+                <h3 className="text-xl font-semibold text-foreground">מבוסס מחקר</h3>
+                <p className="text-muted-foreground">
+                  המודל של אדגר שיין - מחקר מוכח של עשרות שנים
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-8">
+              <Link to="/questionnaire">
+                <Button variant="outline" size="lg" className="px-12 py-4 text-lg">
+                  בואו נתחיל
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </main>
