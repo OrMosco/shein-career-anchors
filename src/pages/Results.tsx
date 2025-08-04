@@ -124,9 +124,6 @@ const Results = () => {
 
           {/* Spider Chart */}
           <Card>
-            <CardHeader>
-              <CardTitle className="text-center">גרף עכביש אינטראקטיבי</CardTitle>
-            </CardHeader>
             <CardContent>
               <SpiderChart results={results} />
             </CardContent>
