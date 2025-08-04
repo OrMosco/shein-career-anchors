@@ -29,7 +29,7 @@ const About = () => {
           {/* Research Background */}
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 justify-end">
+              <CardTitle className="flex items-center gap-2">
                 <BookOpen className="h-6 w-6 text-primary" />
                 <span>המחקר המקורי</span>
               </CardTitle>
@@ -50,23 +50,23 @@ const About = () => {
           {/* Who is it for */}
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle className="text-right">למי זה מתאים?</CardTitle>
+              <CardTitle>למי זה מתאים?</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4">
-                <div className="flex items-center gap-3 justify-end">
+                <div className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-primary" />
                   <span>אם את/ה בתחילת הדרך המקצועית שלך</span>
                 </div>
-                <div className="flex items-center gap-3 justify-end">
+                <div className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-primary" />
                   <span>אם את/ה מתלבט/ת לגבי שינוי קריירה</span>
                 </div>
-                <div className="flex items-center gap-3 justify-end">
+                <div className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-primary" />
                   <span>אם את/ה מרגיש/ה חוסר סיפוק מהעבודה הנוכחית</span>
                 </div>
-                <div className="flex items-center gap-3 justify-end">
+                <div className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-primary" />
                   <span>או אם את/ה פשוט סקרן/ית לגלות מה באמת מניע אותך</span>
                 </div>
@@ -77,47 +77,47 @@ const About = () => {
           {/* How it works */}
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle className="text-right">איך זה עובד?</CardTitle>
+              <CardTitle>איך זה עובד?</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-6">
-                <div className="flex items-start gap-4 justify-end">
-                  <div className="text-right">
-                    <h4 className="font-semibold mb-1">תמלא/י שאלון קצר ואנונימי</h4>
-                    <p className="text-muted-foreground">40 שאלות בלבד</p>
-                  </div>
+                <div className="flex items-start gap-4">
                   <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-semibold">
                     1
                   </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">תמלא/י שאלון קצר ואנונימי</h4>
+                    <p className="text-muted-foreground">40 שאלות בלבד</p>
+                  </div>
                 </div>
 
-                <div className="flex items-start gap-4 justify-end">
-                  <div className="text-right">
-                    <h4 className="font-semibold mb-1">תראה/י תוצאות בגרף עכביש אינטראקטיבי</h4>
-                    <p className="text-muted-foreground">ויזואליזציה ברורה של העוגנים שלך</p>
-                  </div>
+                <div className="flex items-start gap-4">
                   <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-semibold">
                     2
                   </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">תראה/י תוצאות בגרף עכביש אינטראקטיבי</h4>
+                    <p className="text-muted-foreground">ויזואליזציה ברורה של העוגנים שלך</p>
+                  </div>
                 </div>
 
-                <div className="flex items-start gap-4 justify-end">
-                  <div className="text-right">
-                    <h4 className="font-semibold mb-1">תקבל/י הסבר אישי</h4>
-                    <p className="text-muted-foreground">על העוגנים הדומיננטיים שלך</p>
-                  </div>
+                <div className="flex items-start gap-4">
                   <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-semibold">
                     3
                   </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">תקבל/י הסבר אישי</h4>
+                    <p className="text-muted-foreground">על העוגנים הדומיננטיים שלך</p>
+                  </div>
                 </div>
 
-                <div className="flex items-start gap-4 justify-end">
-                  <div className="text-right">
-                    <h4 className="font-semibold mb-1">תוכל/י לקרוא סיכום ברור</h4>
-                    <p className="text-muted-foreground">עם תובנות פרקטיות לקריירה שלך</p>
-                  </div>
+                <div className="flex items-start gap-4">
                   <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-semibold">
                     4
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">תוכל/י לקרוא סיכום ברור</h4>
+                    <p className="text-muted-foreground">עם תובנות פרקטיות לקריירה שלך</p>
                   </div>
                 </div>
               </div>
