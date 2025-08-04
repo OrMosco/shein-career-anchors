@@ -13,8 +13,17 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen bg-background font-assistant">
+      {/* Header */}
+      <header className="bg-transparent border-b border-border/30">
+        <div className="container mx-auto px-6 py-6 flex justify-end items-center">
+          <Link to="/about">
+            <Anchor className="h-8 w-8 text-primary" />
+          </Link>
+        </div>
+      </header>
+
       {/* Minimal Hero Section */}
-      <main className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
+      <main className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6 text-center">
         <div className="max-w-2xl mx-auto space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
             עוגני קריירה
