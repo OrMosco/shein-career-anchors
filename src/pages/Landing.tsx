@@ -29,7 +29,7 @@ const Landing = () => {
             עוגני קריירה
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4">
-            שאלון זה יכול לסייע לזהות עוגן הקריירה שלך - הגורם החיוני שמניע אותך בבחירת עיסוק.
+            אבחון הגורמים שמניעים אותנו בבחירת קריירה
           </p>
           
           <div className="pt-8">
