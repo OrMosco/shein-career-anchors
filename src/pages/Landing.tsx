@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Target, Users, TrendingUp, Anchor } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Landing = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -32,7 +33,18 @@ const Landing = () => {
             אבחון הגורמים שמניעים אותנו בבחירת קריירה
           </p>
           
-          <div className="pt-8">
+          <div className="pt-8 space-y-8">
+            <div className="mx-auto w-full max-w-3xl">
+              <AspectRatio ratio={16 / 9}>
+                <img
+                  src="/lovable-uploads/65f19491-dbfc-4de9-bb7b-d02a141cf177.png"
+                  alt="איור עוגני קריירה – אבחון הגורמים שמניעים אותנו בבחירת קריירה"
+                  loading="lazy"
+                  className="h-full w-full object-cover rounded-2xl shadow-xl ring-1 ring-border/50"
+                />
+              </AspectRatio>
+            </div>
+
             <Link to="/questionnaire">
               <Button 
                 size="lg"
