@@ -23,7 +23,7 @@ const Landing = () => {
       </header>
 
       {/* Minimal Hero Section */}
-      <main className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6 text-center pt-16">
+      <main className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6 text-center pt-24">
         <div className="max-w-2xl mx-auto space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
             עוגני קריירה
@@ -45,7 +45,7 @@ const Landing = () => {
           </div>
 
           {/* Additional content sections - simplified */}
-          <div className="pt-48 space-y-16">
+          <div className="pt-80 space-y-16">
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-foreground">למי זה מתאים?</h2>
               <div className="space-y-4 text-lg text-muted-foreground">
