@@ -96,7 +96,7 @@ const About = () => {
                     2
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">תראה/י תוצאות בגרף עכביש אינטראקטיבי</h4>
+                    <h4 className="font-semibold mb-1">תראה תוצאות באופן אינטראקטיבי</h4>
                     <p className="text-muted-foreground">ויזואליזציה ברורה של העוגנים שלך</p>
                   </div>
                 </div>
