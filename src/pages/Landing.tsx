@@ -42,8 +42,9 @@ const Landing = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
             עוגני קריירה
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4">
-            אבחון הגורמים שמניעים אותנו בבחירת קריירה
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4 min-h-[2em]">
+            {typedText}
+            <span className="inline-block w-0.5 h-[1em] bg-current align-middle mr-1 animate-pulse" />
           </p>
           
           <div className="pt-8">
