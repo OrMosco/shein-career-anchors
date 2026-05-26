@@ -44,7 +44,9 @@ const Landing = () => {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4 min-h-[2em]">
             {typedText}
-            <span className="inline-block w-0.5 h-[1em] bg-current align-middle mr-1 animate-pulse" />
+            {typedText.length < fullText.length && (
+              <span className="inline-block w-0.5 h-[1em] bg-current align-middle mr-1 animate-pulse" />
+            )}
           </p>
           
           <div className="pt-8">
