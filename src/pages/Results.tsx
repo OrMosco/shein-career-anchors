@@ -129,15 +129,6 @@ const Results = () => {
             </CardContent>
           </Card>
 
-          {/* Detailed Results Table */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-center">תוצאות מפורטות</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ResultsTable results={results} />
-            </CardContent>
-          </Card>
 
           {/* Insights and Recommendations */}
           <Card className="bg-primary/5 border-primary/20">
