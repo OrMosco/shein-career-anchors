@@ -162,10 +162,6 @@ const Results = () => {
             <Button variant="outline" onClick={handleRestart}>
               עשה את השאלון שוב
             </Button>
-            <Button variant="ghost">
-              <Download className="h-4 w-4 ml-2" />
-              הורד תוצאות
-            </Button>
           </div>
         </div>
       </main>
