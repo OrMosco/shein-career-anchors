@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Brain, RotateCcw, Download } from 'lucide-react';
+import { Brain, RotateCcw, MessageCircle } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Answer, CareerAnchorResult } from '@/types/career';
 import { calculateResults, getTopAnchors, validateAnswers } from '@/utils/resultsCalculator';
@@ -158,9 +158,13 @@ const Results = () => {
           </Card>
 
           {/* Action Buttons */}
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <Button variant="outline" onClick={handleRestart}>
               עשה את השאלון שוב
+            </Button>
+            <Button onClick={() => navigate('/chat')}>
+              <MessageCircle className="h-4 w-4 ml-2" />
+              דבר איתנו על הצעד הבא
             </Button>
           </div>
         </div>
