@@ -2,14 +2,28 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Target, Users, TrendingUp, Anchor } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Landing = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const fullText = 'אבחון הגורמים שמניעים אותנו בבחירת קריירה';
+  const [typedText, setTypedText] = useState('');
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      i++;
+      setTypedText(fullText.slice(0, i));
+      if (i >= fullText.length) clearInterval(interval);
+    }, 60);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleButtonClick = () => {
     setIsClicked(true);
   };
+
+
 
   return (
     <div className="min-h-screen bg-background font-assistant">
