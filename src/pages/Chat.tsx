@@ -13,6 +13,8 @@ interface ChatMessage {
   content: string;
 }
 
+const quickPrompts = ['איך לחפש עבודות שמתאימות לי', 'במה עלי להתמקד בחיפוש'];
+
 const buildResultsContext = (results: CareerAnchorResult[]): string => {
   const sorted = [...results].sort((a, b) => b.score - a.score);
   const lines = sorted.map((r, i) => `${i + 1}. ${r.name} — ציון ${r.score.toFixed(1)} — ${r.description}`);
@@ -27,7 +29,6 @@ const Chat = () => {
   const [input, setInput] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem('questionnaire-state');
@@ -57,10 +58,6 @@ const Chat = () => {
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages]);
-
-  useEffect(() => {
-    textareaRef.current?.focus();
-  }, [isStreaming]);
 
   const handleSend = async () => {
     const text = input.trim();
@@ -151,7 +148,7 @@ const Chat = () => {
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 py-6 max-w-3xl flex flex-col">
+      <main className="flex-1 container mx-auto px-4 py-6 max-w-3xl flex flex-col min-h-0">
         <div className="text-center mb-4">
           <h2 className="text-2xl font-bold">שיחה עם המאמן</h2>
           {topAnchors.length > 0 && (
@@ -161,8 +158,8 @@ const Chat = () => {
           )}
         </div>
 
-        <Card className="flex-1 flex flex-col overflow-hidden mb-4">
-          <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[50vh] max-h-[60vh]">
+        <Card className="flex-1 flex flex-col overflow-hidden mb-4 min-h-0">
+          <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0">
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -184,9 +181,23 @@ const Chat = () => {
           </div>
         </Card>
 
+        <div className="mb-3 flex flex-wrap gap-2">
+          {quickPrompts.map((prompt) => (
+            <Button
+              key={prompt}
+              variant="outline"
+              size="sm"
+              onClick={() => setInput(prompt)}
+              disabled={isStreaming}
+              className="whitespace-normal text-right h-auto py-2"
+            >
+              {prompt}
+            </Button>
+          ))}
+        </div>
+
         <div className="flex gap-2 items-end">
           <Textarea
-            ref={textareaRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
