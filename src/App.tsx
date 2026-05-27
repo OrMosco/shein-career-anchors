@@ -18,9 +18,9 @@ const AnalyticsTracker = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const pagePath = `${location.pathname}${location.search}${location.hash}`;
+    const pagePath = `${location.pathname}${location.search}`;
     trackPageView(pagePath);
-  }, [location.hash, location.pathname, location.search]);
+  }, [location.pathname, location.search]);
 
   return null;
 };
