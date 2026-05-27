@@ -14,7 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      external_referral_entries: {
+        Row: {
+          created_at: string
+          landing_path: string
+          referrer_host: string
+          referrer_url: string
+          visitor_id: string
+        }
+        Insert: {
+          created_at?: string
+          landing_path: string
+          referrer_host: string
+          referrer_url: string
+          visitor_id: string
+        }
+        Update: {
+          created_at?: string
+          landing_path?: string
+          referrer_host?: string
+          referrer_url?: string
+          visitor_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

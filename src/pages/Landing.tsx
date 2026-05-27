@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Target, Users, TrendingUp, Anchor } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { trackExternalReferralEntry } from '@/utils/referralTracking';
 
 const Landing = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -17,6 +18,12 @@ const Landing = () => {
       if (i >= fullText.length) clearInterval(interval);
     }, 60);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    trackExternalReferralEntry().catch((error) => {
+      console.error('Failed to track external referral entry', error);
+    });
   }, []);
 
   const handleButtonClick = () => {
