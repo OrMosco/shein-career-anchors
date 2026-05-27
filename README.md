@@ -38,6 +38,16 @@ To enable GitHub Pages in the repository settings:
 1. Go to **Settings → Pages**
 2. Set **Source** to **GitHub Actions**
 
+## External Referral Tracking
+
+The landing page now logs first-time visitors that arrived from an external referrer into the Supabase table `public.external_referral_entries`.
+
+To count how many people entered from external sites, run:
+
+```sql
+select count(*) from public.external_referral_entries;
+```
+
 ## Tech Stack
 
 - [Vite](https://vitejs.dev/)
