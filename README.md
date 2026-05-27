@@ -38,6 +38,17 @@ To enable GitHub Pages in the repository settings:
 1. Go to **Settings → Pages**
 2. Set **Source** to **GitHub Actions**
 
+## Analytics
+
+Google Analytics 4 is supported for the GitHub Pages deployment.
+
+To enable it:
+1. In GitHub, go to **Settings → Secrets and variables → Actions → Variables**.
+2. Add a repository variable named `VITE_GA_MEASUREMENT_ID` with your GA4 measurement ID (for example `G-XXXXXXXXXX`).
+3. Re-run deployment or push a new commit.
+
+If this variable is not set, analytics stays disabled.
+
 ## External Referral Tracking
 
 The landing page now logs first-time visitors that arrived from an external referrer into the Supabase table `public.external_referral_entries`.

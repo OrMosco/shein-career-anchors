@@ -2,15 +2,28 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Questionnaire from "./pages/Questionnaire";
 import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
 import Chat from "./pages/Chat";
+import { trackPageView } from "./lib/analytics";
 
 const queryClient = new QueryClient();
+
+const AnalyticsTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const pagePath = `${location.pathname}${location.search}${location.hash}`;
+    trackPageView(pagePath);
+  }, [location.hash, location.pathname, location.search]);
+
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -18,6 +31,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <HashRouter>
+        <AnalyticsTracker />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
