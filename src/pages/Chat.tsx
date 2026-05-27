@@ -59,8 +59,8 @@ const Chat = () => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages]);
 
-  const handleSend = async () => {
-    const text = input.trim();
+  const handleSend = async (presetText?: string) => {
+    const text = (presetText ?? input).trim();
     if (!text || isStreaming) return;
 
     const newMessages: ChatMessage[] = [...messages, { role: 'user', content: text }];
@@ -187,7 +187,7 @@ const Chat = () => {
               key={prompt}
               variant="outline"
               size="sm"
-              onClick={() => setInput(prompt)}
+              onClick={() => void handleSend(prompt)}
               disabled={isStreaming}
               className="whitespace-normal text-right h-auto py-2"
             >
