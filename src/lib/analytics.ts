@@ -26,7 +26,7 @@ export const initializeAnalytics = () => {
   document.head.appendChild(script);
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function gtag(...args: unknown[]) {
+  window.gtag = window.gtag || function (...args: unknown[]) {
     window.dataLayer.push(args);
   };
   window.gtag("js", new Date());
