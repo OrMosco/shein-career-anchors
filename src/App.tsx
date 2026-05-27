@@ -19,10 +19,9 @@ const AnalyticsTracker = () => {
 
   useEffect(() => {
     const hashPath = location.hash.replace(/^#/, "");
-    const routePath = location.pathname !== "/" || !hashPath ? location.pathname : hashPath;
-    const pagePath = `${routePath}${location.search}`;
+    const pagePath = `${hashPath || "/"}${location.search}`;
     trackPageView(pagePath);
-  }, [location.hash, location.pathname, location.search]);
+  }, [location.hash, location.search]);
 
   return null;
 };
