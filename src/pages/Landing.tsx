@@ -21,7 +21,9 @@ const Landing = () => {
   }, []);
 
   useEffect(() => {
-    trackExternalReferralEntry().catch(() => undefined);
+    trackExternalReferralEntry().catch((error) => {
+      console.error('Failed to track external referral entry', error);
+    });
   }, []);
 
   const handleButtonClick = () => {

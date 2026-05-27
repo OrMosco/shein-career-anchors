@@ -1,7 +1,5 @@
-create extension if not exists "pgcrypto";
-
 create table if not exists public.external_referral_entries (
-  visitor_id uuid primary key default gen_random_uuid(),
+  visitor_id uuid primary key,
   referrer_url text not null,
   referrer_host text not null,
   landing_path text not null,
