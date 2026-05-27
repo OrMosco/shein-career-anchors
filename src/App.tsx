@@ -16,12 +16,13 @@ const queryClient = new QueryClient();
 
 const AnalyticsTracker = () => {
   const location = useLocation();
+  const { hash, search } = location;
 
   useEffect(() => {
-    const hashPath = location.hash.replace(/^#/, "");
-    const pagePath = `${hashPath || "/"}${location.search}`;
+    const hashPath = hash.replace(/^#/, "");
+    const pagePath = `${hashPath || "/"}${search}`;
     trackPageView(pagePath);
-  }, [location.hash, location.search]);
+  }, [hash, search]);
 
   return null;
 };
