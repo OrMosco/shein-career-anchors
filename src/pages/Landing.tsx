@@ -2,14 +2,28 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Target, Users, TrendingUp, Anchor } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Landing = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const fullText = 'אבחון הגורמים שמניעים אותנו בבחירת קריירה';
+  const [typedText, setTypedText] = useState('');
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      i++;
+      setTypedText(fullText.slice(0, i));
+      if (i >= fullText.length) clearInterval(interval);
+    }, 60);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleButtonClick = () => {
     setIsClicked(true);
   };
+
+
 
   return (
     <div className="min-h-screen bg-background font-assistant">
@@ -28,8 +42,11 @@ const Landing = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
             עוגני קריירה
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4">
-            אבחון הגורמים שמניעים אותנו בבחירת קריירה
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4 min-h-[2em]">
+            {typedText}
+            {typedText.length < fullText.length && (
+              <span className="inline-block w-0.5 h-[1em] bg-current align-middle mr-1 animate-pulse" />
+            )}
           </p>
           
           <div className="pt-8">
