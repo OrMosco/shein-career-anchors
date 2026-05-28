@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/shein-career-anchors/",
+  base: process.env.VERCEL ? "/" : "/shein-career-anchors/",
   server: {
     host: "::",
     port: 8080,
